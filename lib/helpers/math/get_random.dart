@@ -1,6 +1,7 @@
 import 'dart:math';
 
+Random randomizer = Random();
 int getRandomNumber(int min, int max) {
-  final ramdomNumber = Random();
-  return min + ramdomNumber.nextInt(max);
+  final randomNumber = randomizer.nextInt(max) + 1;
+  return randomNumber;
 }

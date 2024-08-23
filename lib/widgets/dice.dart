@@ -6,6 +6,7 @@ int maxDice = 6;
 double diceHeight = 200;
 double diceWidth = 200;
 
+
 class DiceWidget extends StatefulWidget {
   const DiceWidget({super.key});
 
@@ -24,15 +25,15 @@ class _DiceWidgetState extends State<DiceWidget> {
 
   @override
   Widget build(BuildContext context) {
-    var dice = 'assets/images/dice-$diceNumber.png';
+    var currentDiceRoll = 'assets/images/dice-$diceNumber.png';
     return Container(
       decoration: const BoxDecoration(),
       padding: const EdgeInsets.all(20),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(
-            dice,
+            currentDiceRoll,
             height: diceHeight,
             width: diceWidth,
           ),
